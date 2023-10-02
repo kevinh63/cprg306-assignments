@@ -6,7 +6,7 @@ export default function Page(){
         <main>
             <h1>My Shopping List</h1>
             <StudentInfo />
-            <Link href="../">Back &lt;-</Link>
+            <Link href="../" className="hover:underline">Back &lt;-</Link>
         </main>
     )
 }
