@@ -9,6 +9,7 @@ export default function Home() {
       <ul>
         <li className="hover:underline"><Link href="week2">week2</Link></li>
         <li className="hover:underline"><Link href="week3">week3</Link></li>
+        <li className="hover:underline"><Link href="week4">week4</Link></li>
       </ul>
     </main>
   )
