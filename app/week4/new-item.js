@@ -24,7 +24,7 @@ const NewItem = () => {
 
   return (
     <div className="max-w-md mx-auto mt-8 p-4 bg-white rounded shadow" >
-      <h2 className="text-2xl mb-4">Adding New Item</h2>
+      <h2 className="text-2xl mb-4 text-center">Adding New Item</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
