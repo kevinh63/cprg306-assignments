@@ -1,24 +1,23 @@
 "use client";
 import Item from "./item";
 import { useState } from "react";
-import itemsData from "./items.json";
 
-export default function ItemList() {
+export default function ItemList({ items }) {
     const [sortBy, setSortBy] = useState("name");
 
-    let items = itemsData.map((item) => ({ ...item }));
+    let itemsCopy = items.map((item) => ({ ...item }));
 
-    const sortItem = () => {
+    const sortItem = (itemsToSort) => {
         if (sortBy === "name") {
-            return items.sort((a, b) => a.name.localeCompare(b.name));
+            return itemsToSort.slice().sort((a, b) => a.name.localeCompare(b.name));
         }
         if (sortBy === "category") {
-            return items.sort((a, b) => a.category.localeCompare(b.category));
+            return itemsToSort.slice().sort((a, b) => a.category.localeCompare(b.category));
         }
-        return items;
+        return itemsToSort;
     };
 
-    const sortedItems = sortItem();
+    const sortedItems = sortItem(itemsCopy);
 
     return (
         <main className="container mx-auto mt-10">

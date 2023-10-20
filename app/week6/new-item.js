@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 
-const NewItem = () => {
+const NewItem = ({onAddItem}) => {
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState('produce');
@@ -14,9 +14,9 @@ const NewItem = () => {
       quantity,
       category,
     };
-    console.log(item);
-    alert(`Name: ${name}, Quantity: ${quantity}, Category: ${category}`);
-    
+
+    onAddItem(item);
+
     setName('');
     setQuantity(1);
     setCategory('produce');
