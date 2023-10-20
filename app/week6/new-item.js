@@ -23,7 +23,7 @@ const NewItem = ({onAddItem}) => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-8 p-4 bg-white rounded shadow" >
+    <div className="max-w-2xl mx-auto mt-8 p-4 bg-white rounded shadow w-3/4">
       <h2 className="text-2xl mb-4 text-center">Adding New Item</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
